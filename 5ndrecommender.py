@@ -1,19 +1,14 @@
-from gekko import GEKKO
-m = GEKKO()
+# cli.py
+import argparse
+# 创建解析器
+parser = argparse.ArgumentParser(description='Calc Add')
 
-x1 = m.Var(lb=0)
-#x2 = m.Var(lb=0)
-x3 = m.Var(lb=0)
+# 添加位置参数
+parser.add_argument('a', type=int, help='variable a to add')
+parser.add_argument('b', type=int, help='variable b to add')
 
-m.Equation(5*x1 + 4*x3 <= 50)
-m.Equation(2*x1 + 6*x3 <= 40) 
-m.Equation(2*x1 + 3*x3 <= 110)
+# 解析参数
+args = parser.parse_args()
+# 使用参数
+print( args.a, args.b)
 
-m.Maximize(2*x1  + 3*x3)
-#m.Maximize(x1 + x2 + x3)
-m.solve(disp=False)
-print("Value of X is", x1.value[0])
-#print("Value of Y is", x2.value[0])
-print("Value of Z is", x3.value[0])
-
-print(-m.options.OBJFCNVAL)
