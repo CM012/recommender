@@ -7,7 +7,7 @@ parser.add_argument('-c', '-carbon', type=float, default=100, help='Difference i
 parser.add_argument('-p', '-protein', type=float, default=20, help='Difference in the targeted protein intake') #Protein
 parser.add_argument('-f', '-fat', type=float, default=20, help='Difference in the targeted fat intake') #Fat
 parser.add_argument('--NS', action='store_true', help='Difference in the targeted fat intake') #Without Sweetpotato
-parser.add_argument('--NR', action='store_true', help='Difference in the targeted fat intake') #Without Wedlentils
+parser.add_argument('--NR', action='store_true', help='Difference in the targeted fat intake') #Without Redlentils
 parser.add_argument('--NA', action='store_true', help='Difference in the targeted fat intake') #Without Avocado
 args = parser.parse_args()
 
@@ -16,9 +16,12 @@ args = parser.parse_args()
 # [ carbon                                  ]
 # [ protein                                 ]
 # [ fat                                     ]
-W = np.array([[0 if args.NS else 20, 0 if args.NR else 20.1, 0 if args.NA else 9], 
-              [0 if args.NS else 1.45, 0 if args.NR else 9.02, 0 if args.NA else 2], 
-              [0 if args.NS else 0, 0 if args.NR else 0.38, 0 if args.NA else 15]])
+# W = np.array([[0 if args.NS else 20, 0 if args.NR else 20.1, 0 if args.NA else 9], 
+#               [0 if args.NS else 1.45, 0 if args.NR else 9.02, 0 if args.NA else 2], 
+#               [0 if args.NS else 0, 0 if args.NR else 0.38, 0 if args.NA else 15]])
+W = np.array([[20, 20.1, 9], 
+              [1.45, 9.02, 2], 
+              [0, 0.38, 15]])
 print(W)
 
 # Nutrition Target Matrix
