@@ -53,6 +53,7 @@ bmr = calculate_bmr(weight, height, age, sex)
 calories = calculate_daily_calories(bmr, activity_level)
 
 if diet_plan == "balance":
+<<<<<<< HEAD
     carbon_intake = calories * 0.65/4
     protein_intake = calories * 0.125 / 4
     fat_intake = calories * 0.225 / 9
@@ -66,6 +67,21 @@ elif diet_plan == "low carb":
     fat_intake = calories * 0.30 / 9
 elif diet_plan == "high protein":
     carbon_intake = calories * 0.725/4
+=======
+    carbon_intake = calories * 0.65 /4
+    protein_intake = calories * 0.125 / 4
+    fat_intake = calories * 0.225 / 9
+elif diet_plan == "low fat":
+    carbon_intake = calories * 0.725 /4
+    protein_intake = calories * 0.125 / 4
+    fat_intake = calories * 0.15 / 9
+elif diet_plan == "low carb":
+    carbon_intake = calories * 0.55 / 4
+    protein_intake = calories * 0.15 / 4
+    fat_intake = calories * 0.30 / 9
+elif diet_plan == "high protein":
+    carbon_intake = calories * 0.725 /4
+>>>>>>> 7dbaaeb353f79a33091fb8f5c2cea482c9c7f220
     protein_intake = calories * 0.15 / 4
     fat_intake = calories * 0.125 / 9
 

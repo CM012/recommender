@@ -5,7 +5,10 @@ height = height * 39.3701
 age = int(input("Enter your age: "))
 sex = input("Enter your sex (male or female): ")
 activity_level = input("Enter your activity level (sedentary, lightly active, moderately active, very active): ")
+<<<<<<< HEAD
 #s
+=======
+>>>>>>> 7dbaaeb353f79a33091fb8f5c2cea482c9c7f220
 
 if type(age) != int:
     print('Error, please input an integer of your age, for example 19')
